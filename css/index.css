@@ -400,11 +400,28 @@ button {
   border: 1px solid white;
   background: black;
   color: white;
-  font-size: 16px;
+  font-size: 0.5rem;
   cursor: pointer;
 }
 
 button:hover {
   background: white;
   color: black;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute elements */
+  gap: 10px;
+}
+
+.material-icons {
+  font-size: 0.5rem;
 }
