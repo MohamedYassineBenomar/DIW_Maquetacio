@@ -1,7 +1,13 @@
+html {
+  font-size: 35px;
+
+}
+
+
 /* Global styles */
 body {
     margin: auto;
-    font-size: large;
+    
   }
   
   /* Container
@@ -29,12 +35,14 @@ body {
   
   .nav-main{
         display: flex;
+        font-size: 0.6rem;
         background-color: rgb(255, 219, 164);
         justify-content: flex-end;
         padding: 30px 30px 30px 30px;
         gap: 50px;
         position: sticky;
         top: 0px;
+        z-index: 1;
   }
 
   img {
@@ -75,7 +83,9 @@ h2 {
   font-size: larger;
   color: black;
 }
-
+.nav-main a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
 .carta {
   display: flex;
   gap: 20px;
@@ -93,11 +103,13 @@ h2 {
   border-radius: 10px;
 }
 .carta-txt {
+  font-size: 0.5rem;
   gap: 20px;
   padding: 40px;
   border: 1px solid black;
 }
 .carta-img {
+  border-radius: 15px;
   height: 200px;
   width: 400px;
 }
@@ -117,6 +129,7 @@ articles h3 {
 }
 
 .carta-container {
+  display: grid;
   padding: 20px 20px 0px 20px;
 
 }
@@ -191,10 +204,6 @@ h4 {
   object-fit: contain;
 }
 
-.galeria {
-
-}
-
 .galeria-carta {
   display: flex;
   margin: 30px;
@@ -226,4 +235,109 @@ h4 {
 .img-galeria:nth-child(4){
   filter: brightness(30%);
 }
-.article-generic galeria
+
+
+.article-carta {
+  
+
+}
+
+.carta-container {
+  display: grid;
+  grid-template-rows: 50px 50px 80px 100px 50px 80px 100px;    
+  grid-template-columns: 0.5fr 2fr 2fr;
+  grid-gap: 10px;
+  font-size: 0.5em;
+  padding-top: 0px;
+  
+}
+.item {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+ 
+}
+
+.item-1 {
+  grid-row: span 1;
+  grid-column: span 3;
+ /* background-color: red;*/
+  border: 1px solid black;
+  border-radius: 20px;
+  place-items: center;
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  
+}
+
+.item-2 {
+  
+  grid-row: span 3;
+  grid-column: span 1;
+ /* background-color: rgb(11, 31, 95); */
+ place-items: center;
+ border: 1px solid black;
+ display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.item-3 {
+  grid-row: span 1;
+  grid-column: span 2;
+/*  background-color: rgb(64, 97, 36);*/
+}
+
+.item-4 {
+  grid-row: span 1;
+  grid-column: span 2;
+ /* background-color: rgb(64, 97, 36);*/
+}
+
+.item-5 {
+  grid-row: span 1;
+  grid-column: span 1;
+/*   background-color: rgb(64, 97, 36);*/
+}
+
+.item-6 {
+  grid-row: span 1;
+  grid-column: span 1;
+/*   background-color: rgb(64, 97, 36);*/
+}
+
+.carta-img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensures no content spills outside */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Ensures the image fills the container */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0; /* Starts from the bottom */
+  width: 100%;
+  height: 30%; /* Covers 30% of the image */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: white;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 18px;
+  font-weight: bold;
+}
