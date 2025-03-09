@@ -230,9 +230,13 @@ h4 {
  /* img div */
  .img-galeria:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5) ;
+  filter: brightness(70%);
 }
 
-.img-galeria:nth-child(4){
+.img-galeria:nth-child(1),
+.img-galeria:nth-child(4),
+.img-galeria:nth-child(5),
+.img-galeria:nth-child(8) {
   filter: brightness(30%);
 }
 
@@ -340,4 +344,67 @@ img {
   align-items: center; /* Center vertically */
   font-size: 18px;
   font-weight: bold;
+}
+
+.form-container {
+  width: 95.5%;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+label {
+
+  padding: 5px;
+  font-size: 14px;
+}
+
+input, textarea {
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+ 
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
 }

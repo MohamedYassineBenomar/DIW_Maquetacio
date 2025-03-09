@@ -114,7 +114,40 @@
             <articles class="article-generic article-reserva">
                 <h2>Reserva</h2>
                 <div class="reserva-container"> 
-               
+                    <div class="form-container">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom">
+                                </div>
+                                <div class="form-group">
+                                    <label for="persones">Número de persones</label>
+                                    <input type="number" id="persones" name="persones">
+                                </div>
+                            </div>
+                
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="data">Data</label>
+                                    <input type="date" id="data" name="data">
+                                </div>
+                                <div class="form-group">
+                                    <label for="hora">Hora</label>
+                                    <input type="time" id="hora" name="hora">
+                                </div>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="descripcio">Descripció</label>
+                                <textarea id="descripcio" name="descripcio"></textarea>
+                            </div>
+                
+                            <div class="form-button">
+                                <button type="submit">Reservar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </articles>
         </section>
