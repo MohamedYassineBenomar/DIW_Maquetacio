@@ -360,7 +360,7 @@ form {
 .form-row {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 60px;
 }
 
 .form-group {

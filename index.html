@@ -13,14 +13,14 @@
 
 <body>
     <nav class="nav-main">
-        <a href="#">Nosaltres</a>
-        <a href="#">Carta</a>
-        <a href="#">Galeria</a>
+        <a href="#sobre-nosaltres">Nosaltres</a>
+        <a href="#carta">Carta</a>
+        <a href="#galeria">Galeria</a>
     </nav>
     <main>
-        <img src="images/restaurante.jpg" />
+        <img src="images/restaurante.jpg" alt="Restaurante"/>
         <section class="section-main">
-            <articles class="article-generic article-sobre-nosaltres">
+            <articles id="sobre-nosaltres" class="article-generic article-sobre-nosaltres">
                 <h2 >Sobre nosaltras</h2>
                 <div class="sobre-nosaltres-container">
                     <carta class="carta">
@@ -50,7 +50,7 @@
                     </carta>
                 </div>
             </articles>
-            <articles class="article-generic article-carta" >
+            <articles id="carta" class="article-generic article-carta" >
                 <h2>Carta</h2>
                 <div class="carta-container">
                     <h3 class="item item-1">Menu</h3>
@@ -65,13 +65,13 @@
                     </p>
                     <div class="item item-5 carta-img-container">
                         <div class="image-wrapper">
-                            <img src="images/iStock-507770111.jpg" alt="">
+                            <img src="images/iStock-507770111.jpg" alt="Pasta">
                             <div class="overlay">Pasta</div>
                         </div>
                     </div>
                     <div class="item item-6 carta-img-container">
                         <div class="image-wrapper">
-                            <img src="images/images.jpeg" alt="">
+                            <img src="images/images.jpeg" alt="entrants">
                             <div class="overlay">entrants</div>
                         </div>
                     </div>
@@ -86,30 +86,30 @@
                     </p>
                     <div class="item item-5 carta-img-container">
                         <div class="image-wrapper">
-                            <img src="images/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg" alt="">
+                            <img src="images/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg" alt="amanida">
                             <div class="overlay">amanida</div>
                         </div>
                     </div>
                     <div class="item item-6 carta-img-container">
                         <div class="image-wrapper">
-                            <img src="images/r171.png" alt="">
+                            <img src="images/r171.png" alt="peix">
                             <div class="overlay">peix</div>
                         </div>
                     </div>
                 </div>
             </articles>
-            <articles class="article-generic article-galeria">
+            <articles id="galeria" class="article-generic article-galeria">
                 <h2 >Galeria</h2>
                 <div class="galeria-container">
                     <div class="galeria-carta">
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
-                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt=""></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
+                        <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
                     </div>
                 </div>
             </articles>
@@ -156,13 +156,19 @@
     </main>
     <footer>
         <div class="footer-content">
-            <span class="material-icons">email</span>
-            <span>exemple@exemple.com</span>
+            <div class="footer-item">
+                <span class="material-icons">email</span>
+                <span>Rrestaurant@gmail.com</span>
+            </div>
     
-            <span class="material-icons">phone</span>
-            <span>999999999</span>
+            <div class="footer-item">
+                <span class="material-icons">phone</span>
+                <span>974543405</span>
+            </div>
     
-            <span class="material-icons">image</span>
+            <div class="footer-item">
+                <span class="material-icons">image</span>
+            </div>
         </div>
     </footer>
 </body>
