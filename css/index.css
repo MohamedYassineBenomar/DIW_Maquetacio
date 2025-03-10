@@ -1,6 +1,12 @@
+/* Global styles */
 html {
   font-size: 35px;
   scroll-behavior: smooth;
+}
+
+body {
+  margin: auto;
+
 }
 
 .reserve-button {
@@ -22,87 +28,93 @@ html {
   color: black;
   border: 1px solid black;
 }
-/* Global styles */
-body {
-    margin: auto;
-    
-  }
-  
-  .nav-main{
-        display: flex;
-        font-size: 0.6rem;
-        background-color: rgb(255, 219, 164);
-        justify-content: flex-end;
-        padding: 30px 30px 30px 30px;
-        gap: 50px;
-        position: sticky;
-        top: 0px;
-        z-index: 1;
-  }
 
-  img {
-    display: block;
-    width: 100%;
-  }
-  
-  /* Main Content */
-  /* main {
+
+.nav-main {
+  display: flex;
+  font-size: 0.6rem;
+  background-color: rgb(255, 219, 164);
+  justify-content: flex-end;
+  padding: 30px 30px 30px 30px;
+  gap: 50px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Main Content */
+/* main {
     background-color: blue;
     width: 100%;
     padding: 20px;
   }
    */
-  /* Footer */
-  footer {
-    background-color: rgb(203, 24, 24);
-    color: white;
-    padding: 20px;
-  }
-  
+/* Footer */
+footer {
+  background-color: rgb(203, 24, 24);
+  color: white;
+  padding: 20px;
+}
+
 
 .section-main {
   display: flex;
   flex-direction: column;
   padding: 10px 100px 100px 100px;
-  
+
 
 }
 
 h2 {
+  font-size: 1.2rem;
   padding-left: 40px;
 }
 
 .nav-main a {
-  color: inherit; /* Inherit text color from parent */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  /* Inherit text color from parent */
+  text-decoration: none;
+  /* Remove underline */
   font-size: larger;
   color: black;
 }
+
 .nav-main a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
+  /* Underline on hover */
 }
+
 .carta {
   display: flex;
   gap: 20px;
   padding: 20px;
 }
+
 .carta-reverse {
   display: flex;
   flex-direction: row-reverse;
   gap: 20px;
   padding: 20px;
 }
+
 .article-title {
   border: 1px solid black;
   padding: 20px;
   border-radius: 10px;
 }
+
 .carta-txt {
   font-size: 0.5rem;
   gap: 20px;
   padding: 40px;
   border: 1px solid black;
 }
+
 .carta-img {
   border-radius: 15px;
   height: 200px;
@@ -120,7 +132,7 @@ articles h3 {
 
   display: flex;
   gap: 20px;
-  
+
 }
 
 .carta-container {
@@ -135,6 +147,7 @@ articles h3 {
   flex-direction: column;
   gap: 10px;
 }
+
 /* Ensure the image takes the full width */
 .image-container {
   position: relative;
@@ -143,21 +156,30 @@ articles h3 {
 }
 
 .image-container img {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Full width */
+  height: auto;
+  /* Maintain aspect ratio */
   display: block;
-  object-fit: cover; /* Ensure proper fit */
+  object-fit: cover;
+  /* Ensure proper fit */
 }
+
 h1 {
   font-size: 1.5rem;
 }
+
 /* Overlay text */
 .text-overlay {
   position: absolute;
-  top: 50%; /* Move to the center vertically */
-  left: 5%; /* Position to the left */
-  transform: translateY(-50%); /* Adjust for perfect centering */
-  background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  top: 50%;
+  /* Move to the center vertically */
+  left: 5%;
+  /* Position to the left */
+  transform: translateY(-50%);
+  /* Adjust for perfect centering */
+  background: rgba(255, 255, 255, 0.9);
+  /* White background with transparency */
   padding: 35px;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -199,14 +221,14 @@ menuinfo {
 }
 
 h4 {
-  font-size: xx-large; 
+  font-size: xx-large;
   padding-top: 20px;
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.menuinfo-card-container{
+.menuinfo-card-container {
   display: flex;
   gap: 10px;
   margin: 0px;
@@ -225,13 +247,14 @@ h4 {
   border: 1px solid black;
   border-bottom: 0px;
 }
+
 .menuinfo-card-title {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
 }
 
-.menuinfo-card-img{
+.menuinfo-card-img {
   height: 100%;
   object-fit: contain;
 }
@@ -240,13 +263,15 @@ h4 {
   display: flex;
   margin: 30px;
   flex-wrap: wrap;
-  gap: 10px; /* Space between grid items */
+  gap: 10px;
+  /* Space between grid items */
   align-items: center;
   justify-content: center;
 
 }
- /* img div */
-.img-galeria{
+
+/* img div */
+.img-galeria {
   width: 23%;
   border: 1px solid black;
   border-radius: 4px;
@@ -259,9 +284,10 @@ h4 {
 
 
 }
- /* img div */
- .img-galeria:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5) ;
+
+/* img div */
+.img-galeria:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   filter: brightness(70%);
 }
 
@@ -273,75 +299,79 @@ h4 {
 }
 
 
-.article-carta {
-  
-
-}
+.article-carta {}
 
 .carta-container {
   display: grid;
-  grid-template-rows: 50px 50px 80px 100px 50px 80px 100px;    
+  grid-template-rows: 50px 50px 80px 100px 50px 80px 100px;
   grid-template-columns: 0.5fr 2fr 2fr;
   grid-gap: 10px;
   font-size: 0.5em;
   padding-top: 0px;
-  
+
 }
+
 .item {
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
- 
+
 }
 
 .item-1 {
   grid-row: span 1;
   grid-column: span 3;
- /* background-color: red;*/
+  /* background-color: red;*/
   border: 1px solid black;
   border-radius: 20px;
   place-items: center;
-  display: flex; /* Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  
+  display: flex;
+  /* Flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+
 }
 
 .item-2 {
-  
+
   grid-row: span 3;
   grid-column: span 1;
- /* background-color: rgb(11, 31, 95); */
- place-items: center;
- border: 1px solid black;
- display: flex; /* Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  /* background-color: rgb(11, 31, 95); */
+  place-items: center;
+  border: 1px solid black;
+  display: flex;
+  /* Flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
 }
 
 .item-3 {
   grid-row: span 1;
   grid-column: span 2;
-/*  background-color: rgb(64, 97, 36);*/
+  /*  background-color: rgb(64, 97, 36);*/
 }
 
 .item-4 {
   grid-row: span 1;
   grid-column: span 2;
- /* background-color: rgb(64, 97, 36);*/
+  /* background-color: rgb(64, 97, 36);*/
 }
 
 .item-5 {
   grid-row: span 1;
   grid-column: span 1;
-/*   background-color: rgb(64, 97, 36);*/
+  /*   background-color: rgb(64, 97, 36);*/
 }
 
 .item-6 {
   grid-row: span 1;
   grid-column: span 1;
-/*   background-color: rgb(64, 97, 36);*/
+  /*   background-color: rgb(64, 97, 36);*/
 }
 
 .carta-img-container {
@@ -354,26 +384,33 @@ h4 {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Ensures no content spills outside */
+  overflow: hidden;
+  /* Ensures no content spills outside */
 }
 
 img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* Ensures the image fills the container */
+  object-fit: cover;
+  /* Ensures the image fills the container */
 }
 
 .overlay {
   position: absolute;
-  bottom: 0; /* Starts from the bottom */
+  bottom: 0;
+  /* Starts from the bottom */
   width: 100%;
-  height: 30%; /* Covers 30% of the image */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  height: 30%;
+  /* Covers 30% of the image */
+  background: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black */
   color: white;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
   font-size: 18px;
   font-weight: bold;
 }
@@ -407,12 +444,13 @@ label {
   font-size: 14px;
 }
 
-input, textarea {
+input,
+textarea {
   border: 1px solid black;
   width: 100%;
   padding: 10px;
   border: 1px solid rgb(0, 0, 0);
- 
+
   color: rgb(0, 0, 0);
   font-size: 16px;
 }
@@ -450,7 +488,8 @@ button:hover {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute elements */
+  justify-content: space-between;
+  /* Distribute elements */
   gap: 10px;
 }
 
