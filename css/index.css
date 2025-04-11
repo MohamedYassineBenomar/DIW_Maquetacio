@@ -668,3 +668,16 @@ button:hover {
     width: 100%;
   }
 }
+
+.container-video {
+  width: 40%;
+  
+
+}
+
+.container-video video {
+
+  width: 100%;
+
+}
+
