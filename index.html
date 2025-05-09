@@ -9,7 +9,8 @@
         "initial-scale=1.0" sets the initial zoom level when the page is first loaded by the browser.
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Material Icons font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
     <!-- Link to main stylesheet -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
@@ -19,117 +20,83 @@
     <title>Document</title>
 </head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
-
-    <ar class="container-hola">
-        <p>HELLO WORLD</p>
-
-    </section>
-
-    <a href="#" class="elem"> ELe1</a>
-    <a href="#" class="element-animat"> ELe2</a>
-    <a href="#" class="elem"> ELe3</a>
-
-    <div class="container-imgg">
-        <img src="images/r171.png" />
-    </div>
-
-    <section class="container-hola">
-        <p>HELLO WORLD</p>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    <style>
+        /* ——— video layout ——— */
+        .container-video{position:relative;max-width:60rem;margin:auto}
+        #video_rest{width:100%;height:auto;display:block}
+        
+        /* ——— TOP control bar ——— */
+        .video-controls{
+          position:absolute;inset-block-start:0;inset-inline:0;
+          display:flex;align-items:center;justify-content:center;
+          gap:.5rem;padding:.3rem .6rem;
+          background:rgba(0,0,0,.45)
+        }
+        .video-controls button{
+          all:unset;cursor:pointer;display:grid;place-items:center;
+          border-radius:50%;transition:filter .2s
+        }
+        .video-controls button:hover{filter:drop-shadow(0 0 4px #fff)}
+        .video-controls .material-icons-round{font-size:1.8rem;color:#fff}
+        /* dim the inactive buttons */
+        button.inactive .material-icons-round{opacity:.35}
+        /* slim separator between play/pause and volume buttons */
+        .video-controls .spacer{
+          width:.4rem;height:1.6rem;margin-inline:.4rem;
+          border-left:1px solid rgba(255,255,255,.35)
+        }
+        </style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* ───────────────── nav‑main padding on scroll ───────────────── */
+      const navMain = document.getElementById('nav-main');
+      function setNavPadding() {
+        navMain.style.padding = window.scrollY > 600 ? '60px' : '30px';
+      }
+      window.addEventListener('scroll', setNavPadding);
+      setNavPadding();                                   // first run
+    
+      /* ───────────────── video controls ───────────────────────────── */
+      const video      = document.getElementById('video_rest');
+      const playBtn    = document.getElementById('playBtn');
+      const pauseBtn   = document.getElementById('pauseBtn');
+      const muteBtn    = document.getElementById('muteBtn');
+      const unmuteBtn  = document.getElementById('unmuteBtn');
+    
+      function refreshBtns() {
+        playBtn .classList.toggle('inactive', !video.paused);
+        pauseBtn.classList.toggle('inactive',  video.paused);
+        muteBtn .classList.toggle('inactive', !video.muted);
+        unmuteBtn.classList.toggle('inactive', video.muted);
+      }
+    
+      playBtn .onclick = () => { video.play();  refreshBtns(); };
+      pauseBtn.onclick = () => { video.pause(); refreshBtns(); };
+      muteBtn .onclick = () => { video.muted = true;  refreshBtns(); };
+      unmuteBtn.onclick= () => { video.muted = false; refreshBtns(); };
+    
+      video.addEventListener('play',         refreshBtns);
+      video.addEventListener('pause',        refreshBtns);
+      video.addEventListener('volumechange', refreshBtns);
+    
+      refreshBtns();                         // initial state
+    });
+    </script>
+    
+    
     <!-- Floating Reserve Button -->
     <a href="#reserva" class="reserve-button">Reservar</a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Navigation Menu -->
-    <nav class="nav-main">
+    <nav id="nav-main" class="nav-main">
         <a href="#sobre-nosaltres">Nosaltres</a>
         <a href="#carta">Carta</a>
         <a href="#galeria">Galeria</a>
     </nav>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <main>
-        <!-- Hero Image Section -->
         <!-- Hero Image Section -->
         <div class="hero-container">
             <img src="images/restaurante.jpg" alt="Restaurante"/>
@@ -140,8 +107,6 @@
             </div>
         </div>
         
-      
-
         <section class="section-main">
             <!-- About Us Section -->
             <articles id="sobre-nosaltres" class="article-generic article-sobre-nosaltres">
@@ -231,6 +196,37 @@
                     </div>
                 </div>
             </articles>
+            <!-- ─── Video Section ─────────────────────────────────────────────── -->
+        <articles id="Video" class="article-generic article-Video">
+            <h2>Video del Restaurant</h2>
+            <div class="container-video">
+            <!-- native bottom bar kept -->
+            <video id="video_rest" muted controls preload="metadata">
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        
+            <!-- custom top bar -->
+            <nav class="video-controls">
+                <button id="playBtn"  type="button" title="Play">
+                <span class="material-icons-round">play_circle</span>
+                </button>
+                <button id="pauseBtn" type="button" title="Pause">
+                <span class="material-icons-round">pause_circle</span>
+                </button>
+        
+                <span class="spacer"></span>
+        
+                <button id="unmuteBtn" type="button" title="Sound on">
+                <span class="material-icons-round">volume_up</span>
+                </button>
+                <button id="muteBtn"   type="button" title="Mute">
+                <span class="material-icons-round">volume_off</span>
+                </button>
+            </nav>
+            </div>
+        </articles>
+        
 
             <!-- Reserve Section -->
             <articles id="reserva" class="article-generic article-reserva">
