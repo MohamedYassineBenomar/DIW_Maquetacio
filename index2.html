@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-    <h1>Animaciones</h1>
-    <div class="container-video">
-        <video controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        your browzer does no support
-    </video>
-    </div>
-    <section class="container-animacions">
-        <img src="images/comida.jpg" >
-        <div class="el-animacio">
-            <p>Animacio</p>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Animacions | Vídeo</title>
 
-        </div>
-    </section>
+<!-- (optional) keep your external stylesheet first so inline rules can override it -->
+<link rel="stylesheet" href="css/index.css" />
+
+<!-- Material Icons font -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+
+<style>
+/* ——— video layout ——— */
+.container-video{position:relative;max-width:60rem;margin:auto}
+#video_rest{width:100%;height:auto;display:block}
+
+/* ——— TOP control bar ——— */
+.video-controls{
+  position:absolute;inset-block-start:0;inset-inline:0;
+  display:flex;align-items:center;justify-content:center;
+  gap:.5rem;padding:.3rem .6rem;
+  background:rgba(0,0,0,.45)
+}
+.video-controls button{
+  all:unset;cursor:pointer;display:grid;place-items:center;
+  border-radius:50%;transition:filter .2s
+}
+.video-controls button:hover{filter:drop-shadow(0 0 4px #fff)}
+.video-controls .material-icons-round{font-size:1.8rem;color:#fff}
+/* dim the inactive buttons */
+button.inactive .material-icons-round{opacity:.35}
+/* slim separator between play/pause and volume buttons */
+.video-controls .spacer{
+  width:.4rem;height:1.6rem;margin-inline:.4rem;
+  border-left:1px solid rgba(255,255,255,.35)
+}
+</style>
+</head>
+
+<body>
+
+<h1>Animaciones</h1>
+
+<section class="main">
+  <div class="container-video">
+    <!-- controls attribute shows native bottom bar -->
+    <video id="video_rest" muted controls preload="metadata">
+      <source src="video/video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- custom top bar -->
+    <nav class="video-controls">
+      <button id="playBtn"  title="Play">
+        <span class="material-icons-round">play_circle</span>
+      </button>
+      <button id="pauseBtn" title="Pause">
+        <span class="material-icons-round">pause_circle</span>
+      </button>
+
+      <span class="spacer"></span>
+
+      <button id="unmuteBtn" title="Sound on">
+        <span class="material-icons-round">volume_up</span>
+      </button>
+      <button id="muteBtn"   title="Mute">
+        <span class="material-icons-round">volume_off</span>
+      </button>
+    </nav>
+  </div>
+</section>
+
+<section class="container-animacions">
+  <img src="images/comida.jpg" alt="Comida" />
+  <div class="el-animacio"><p>Animacio</p></div>
+</section>
+
+<script>
+const video      = document.getElementById('video_rest');
+const playBtn    = document.getElementById('playBtn');
+const pauseBtn   = document.getElementById('pauseBtn');
+const muteBtn    = document.getElementById('muteBtn');
+const unmuteBtn  = document.getElementById('unmuteBtn');
+
+/* dim or undim icons to reflect current state */
+function refresh() {
+  playBtn .classList.toggle('inactive', !video.paused);
+  pauseBtn.classList.toggle('inactive',  video.paused);
+  muteBtn .classList.toggle('inactive', !video.muted);
+  unmuteBtn.classList.toggle('inactive', video.muted);
+}
+
+/* click handlers */
+playBtn .onclick = () => { video.play();  refresh(); };
+pauseBtn.onclick = () => { video.pause(); refresh(); };
+muteBtn .onclick = () => { video.muted = true;  refresh(); };
+unmuteBtn.onclick= () => { video.muted = false; refresh(); };
+
+/* keep in sync with native controls or keyboard shortcuts */
+video.addEventListener('play',  refresh);
+video.addEventListener('pause', refresh);
+video.addEventListener('volumechange', refresh);
+
+/* initial paint */
+refresh();
+</script>
+
 </body>
 </html>
