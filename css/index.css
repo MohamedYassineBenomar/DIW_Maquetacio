@@ -81,19 +81,7 @@ body {
   border: 1px solid black;
 }
 
-.nav-main {
-  display: flex;
-  font-size: 0.6rem;
-  background-color: rgb(255, 219, 164);
-  justify-content: flex-end;
-  padding: 30px 30px 30px 30px;
-  gap: 50px;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-  transition: padding 0.3s ease;
 
-}
 
 img {
   display: block;
@@ -505,199 +493,361 @@ button:hover {
   font-size: 0.5rem;
 }
 
-/* =========================
-   TABLET (max-width: 768px)
-   ========================= */
-@media screen and (max-width: 768px) {
-  .form-row {
-    /* Slightly reduce spacing or partially stack the columns */
-    gap: 20px; /* instead of a large gap */
+  /* =========================
+    TABLET (max-width: 768px)
+    ========================= */
+  @media screen and (max-width: 768px) {
+    .img-galeria {
+      width: 44%;
+      
+    }
+  .galeria-carta {
+    gap: 13px;
   }
-  /* NAV: Center or reduce gap for tablet */
-  .nav-main {
-    justify-content: center;     /* center horizontally */
-    gap: 20px;                   /* shrink or adjust gap as needed */
-  }
-
-  .text-overlay {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    #carta-first-img {
+      width: 100%;
+    }
   
-  .footer-content {
-    justify-content: center;
-    gap: 20px; 
+    .carta {
+      flex-direction: column;
+      padding: 0px;
+    }
+    .carta-reverse {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .form-container {
+      padding: 0px;
+    }
+    .form-row {
+      /* Slightly reduce spacing or partially stack the columns */
+      gap: 20px; /* instead of a large gap */
+    }
+    /* NAV: Center or reduce gap for tablet */
+    .nav-main {
+      justify-content: center;     /* center horizontally */
+      gap: 20px;                   /* shrink or adjust gap as needed */
+    }
+
+    .text-overlay {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .footer-content {
+      justify-content: center;
+      gap: 20px; 
+    }
+
+    .carta-container {
+      grid-template-columns: 1fr 1fr; 
+      grid-template-areas:
+        "menu-principal menu-principal"
+        "submenu1 text1"
+        "submenu1 img1"
+        "img2     img2"
+        "submenu2 text2"
+        "submenu2 img3"
+        "img4     img4";
+      font-size: 0.6em; 
+      grid-gap: 10px;
+    }
+
+    .carta, 
+    .carta-reverse {
+      gap: 10px; 
+    }
+
+    .carta-img {
+      width: 60%;
+      height: auto;
+    }
   }
 
-  .carta-container {
-    grid-template-columns: 1fr 1fr; 
-    grid-template-areas:
-      "menu-principal menu-principal"
-      "submenu1 text1"
-      "submenu1 img1"
-      "img2     img2"
-      "submenu2 text2"
-      "submenu2 img3"
-      "img4     img4";
-    font-size: 0.6em; 
-    grid-gap: 10px;
+  .hero-container {
+    position: relative; 
+    width: 100%; 
+    height: auto;       
   }
 
-  .carta, 
-  .carta-reverse {
-    gap: 10px; 
-  }
-
-  .carta-img {
-    width: 60%;
+  .hero-container img {
+    display: block;
+    width: 100%;
     height: auto;
   }
-}
 
-.hero-container {
-  position: relative; 
-  width: 100%; 
-  height: auto;       
-}
+  /* =========================
+    MOBILE (max-width: 576px)
+    ========================= */
+  @media screen and (max-width: 576px) {
+    .item-1 {
+      display: none;
+    }
+    .text-overlay {
+      display: none;
+    }
+    .section-main {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 100px 10px;
+    }
+    .img-galeria {
+      width: 100%;
+      
+    }
+    .galeria-carta {
+      flex-direction: column;
+    }
+    .form-container {
+      padding: 0px;
+    }
+    .article-Video {
 
-.hero-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+      width: 100%;
+      
+    }
+    .form-row {
+      /* Fully stack the fields */
+      flex-direction: column;
+      gap: 15px;
+    }
 
-/* =========================
-   MOBILE (max-width: 576px)
-   ========================= */
-@media screen and (max-width: 576px) {
-  .form-row {
-    /* Fully stack the fields */
-    flex-direction: column;
-    gap: 15px;
+    .form-group {
+      /* Make each group full width in the stacked layout */
+      width: 100%;
+    }
+    /* NAV: stack links vertically on mobile */
+  
+
+    .text-overlay {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.5rem;
+      padding: 0px 20px 0px 20px;
+    }
+
+    .resto-description {
+      display: none;
+    }
+
+    .carta-container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "menu-principal"
+        "submenu1"
+        "text1"
+        "img1"
+        "img2"
+        "submenu2"
+        "text2"
+        "img3"
+        "img4";
+      font-size: 0.7em; 
+      grid-gap: 10px;
+    }
+
+    .carta,
+    .carta-reverse {
+      flex-direction: column;
+      align-items: center; 
+      gap: 10px; 
+    }
+
+    .carta-img {
+      width: 100%;
+      height: auto; 
+
+    }
+
+    .carta-txt {
+      font-size: 0.8rem;
+      padding: 20px; 
+    }
+
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
   }
-
-  .form-group {
-    /* Make each group full width in the stacked layout */
-    width: 100%;
-  }
-  /* NAV: stack links vertically on mobile */
-  .nav-main {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .text-overlay {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.5rem;
-    padding: 0px 20px 0px 20px;
-  }
-
-  .resto-description {
-    display: none;
-  }
-
-  .carta-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "menu-principal"
-      "submenu1"
-      "text1"
-      "img1"
-      "img2"
-      "submenu2"
-      "text2"
-      "img3"
-      "img4";
-    font-size: 0.7em; 
-    grid-gap: 10px;
-  }
-
-  .carta,
-  .carta-reverse {
-    flex-direction: column;
-    align-items: center; 
-    gap: 10px; 
-  }
-
-  .carta-img {
-    width: 100%;
-    height: auto; 
-
-  }
-
-  .carta-txt {
-    font-size: 0.8rem;
-    padding: 20px; 
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 
 /* Animacio */
 
-.container-animacions {
+  .container-animacions {
 
-  border: 1px solid black;
-  height: 200px;
-  position: relative;
-}
+    border: 1px solid black;
+    height: 200px;
+    position: relative;
+  }
 
-.el-animacio {
+  .el-animacio {
 
 
-  background-color: red;
-  width: 20%;
-  animation-name: animacioEx;
-  animation-duration : 3s;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  top: 70px;
-  position: absolute;
-}
-
-@keyframes animacioEx{
-  0% { 
     background-color: red;
     width: 20%;
-    top: 90px;
-    opacity: 0;
+    animation-name: animacioEx;
+    animation-duration : 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    top: 70px;
+    position: absolute;
   }
-  25% { 
-    background-color: yellow;
-    width: 10%;
-    top: 60px;
-    opacity: 0.25;
-  }
-  50% {
-    background-color: blue;
-    width: 10%;
-    opacity: 0.5;
-    top: 0px;
-   }
-  50% {
-     background-color: rgb(255, 0, 230);
-     opacity: 0.75;
-     width: 10%;
+
+  @keyframes animacioEx{
+    0% { 
+      background-color: red;
+      width: 20%;
+      top: 90px;
+      opacity: 0;
     }
-  100% { 
-    
-    background-color: green;
-    top: 90px;
-    width: 100%;
+    25% { 
+      background-color: yellow;
+      width: 10%;
+      top: 60px;
+      opacity: 0.25;
+    }
+    50% {
+      background-color: blue;
+      width: 10%;
+      opacity: 0.5;
+      top: 0px;
+    }
+    50% {
+      background-color: rgb(255, 0, 230);
+      opacity: 0.75;
+      width: 10%;
+      }
+    100% { 
+      
+      background-color: green;
+      top: 90px;
+      width: 100%;
+    }
   }
-}
 
 
-.container-video video {
+  .container-video video {
 
-  width: 100%;
+    width: 100%;
 
-}
+  }
 
+  /* ─── ANIMACIONS PER A CORRECCIÓ ─── */
+     
+      /* Transició personal afegida per l’Exercici 1 - Q2 */
+      /* Aquesta transició afecta el padding, background-color i box-shadow */
+
+        .nav-main {
+          display: flex;
+          font-size: 0.6rem;
+          background-color: rgb(255, 219, 164);
+          justify-content: flex-end;
+          padding: 30px 30px 30px 30px;
+          gap: 50px;
+          position: sticky;
+          top: 0px;
+          z-index: 1;
+          transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+         }
+        /* Hover expand with transition */
+        .container-hola {
+        background-color: beige;
+        height: 100px;
+        width: 200px;
+        transition-property: width, background-color;
+        transition-duration: 5s;
+        transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+        .container-hola:hover {
+        background-color: red;
+        width: 400px;
+        }
+
+        /* Focus grow transition */
+        .element-animat {
+        font-size: 20px;
+        color: green;
+        }
+        .element-animat:focus {
+        font-size: 60px;
+        color: violet;
+        transition-duration: 2s;
+        }
+
+        /* Image hover zoom + grayscale */
+        .container-imgg img {
+        transition-duration: 2s;
+        }
+        .img-galeria img:hover {
+        transform: rotate(20deg) scale(2);
+        filter: grayscale(1);
+        transition-duration: 5s;
+        }
+
+        /* Fixed button hover */
+        .reserve-button {
+        transition: background 0.3s ease;
+        }
+        .reserve-button:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        }
+
+       
+        /* Hero text entrance */
+        .text-overlay {
+        animation: slideUp 4s forwards;
+        }
+        @keyframes slideUp {
+        0%   { top: 82%; opacity: 0; }
+        33%  { opacity: 0.4; }
+        66%  { opacity: 0.7; }
+        100% { top: 50%; opacity: 1; }
+        }
+
+        /* Animació bloc vermell */
+        .el-animacio {
+        animation-name: animacioEx;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        top: 70px;
+        position: absolute;
+        background-color: red;
+        width: 20%;
+        }
+        @keyframes animacioEx {
+        0%   { background-color: red; width: 20%; top: 90px; opacity: 0; }
+        25%  { background-color: yellow; width: 10%; top: 60px; opacity: 0.25; }
+        50%  { background-color: blue; width: 10%; top: 0px; opacity: 0.5; }
+        75%  { background-color: rgb(255, 0, 230); width: 10%; opacity: 0.75; }
+        100% { background-color: green; top: 90px; width: 100%; }
+        }
+
+        /* ——— video layout ——— */
+        .container-video{position:relative;max-width:60rem;margin:auto}
+        #video_rest{width:100%;height:auto;display:block}
+        
+        /* ——— TOP control bar ——— */
+        .video-controls{
+          position:absolute;inset-block-start:0;inset-inline:0;
+          display:flex;align-items:center;justify-content:center;
+          gap:.5rem;padding:.3rem .6rem;
+          background:rgba(0,0,0,.45)
+        }
+        .video-controls button{
+          all:unset;cursor:pointer;display:grid;place-items:center;
+          border-radius:50%;transition:filter .2s
+        }
+        .video-controls button:hover{filter:drop-shadow(0 0 4px #fff)}
+        .video-controls .material-icons-round{font-size:1.8rem;color:#fff}
+        /* dim the inactive buttons */
+        button.inactive .material-icons-round{opacity:.35}
+        /* slim separator between play/pause and volume buttons */
+        .video-controls .spacer{
+          width:.4rem;height:1.6rem;margin-inline:.4rem;
+          border-left:1px solid rgba(255,255,255,.35)
+        }

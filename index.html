@@ -17,157 +17,13 @@
     <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
     <!-- Stylesheets and Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <script src="javascript/js.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     
-    <style>
-                /* ─── ANIMACIONS PER A CORRECCIÓ ─── */
 
-        /* Hover expand with transition */
-        .container-hola {
-        background-color: beige;
-        height: 100px;
-        width: 200px;
-        transition-property: width, background-color;
-        transition-duration: 5s;
-        transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        }
-        .container-hola:hover {
-        background-color: red;
-        width: 400px;
-        }
-
-        /* Focus grow transition */
-        .element-animat {
-        font-size: 20px;
-        color: green;
-        }
-        .element-animat:focus {
-        font-size: 60px;
-        color: violet;
-        transition-duration: 2s;
-        }
-
-        /* Image hover zoom + grayscale */
-        .container-imgg img {
-        transition-duration: 2s;
-        }
-        .img-galeria img:hover {
-        transform: rotate(20deg) scale(2);
-        filter: grayscale(1);
-        transition-duration: 5s;
-        }
-
-        /* Fixed button hover */
-        .reserve-button {
-        transition: background 0.3s ease;
-        }
-        .reserve-button:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        }
-
-        /* Nav scroll padding */
-        .nav-main {
-        transition: padding 0.3s ease;
-        }
-
-        /* Hero text entrance */
-        .text-overlay {
-        animation: slideUp 2s forwards;
-        }
-        @keyframes slideUp {
-        0%   { top: 82%; opacity: 0; }
-        33%  { top: 75%; opacity: 0.4; }
-        66%  { top: 61%; opacity: 0.7; }
-        100% { top: 50%; opacity: 1; }
-        }
-
-        /* Animació bloc vermell */
-        .el-animacio {
-        animation-name: animacioEx;
-        animation-duration: 3s;
-        animation-delay: 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        top: 70px;
-        position: absolute;
-        background-color: red;
-        width: 20%;
-        }
-        @keyframes animacioEx {
-        0%   { background-color: red; width: 20%; top: 90px; opacity: 0; }
-        25%  { background-color: yellow; width: 10%; top: 60px; opacity: 0.25; }
-        50%  { background-color: blue; width: 10%; top: 0px; opacity: 0.5; }
-        75%  { background-color: rgb(255, 0, 230); width: 10%; opacity: 0.75; }
-        100% { background-color: green; top: 90px; width: 100%; }
-        }
-
-        /* ——— video layout ——— */
-        .container-video{position:relative;max-width:60rem;margin:auto}
-        #video_rest{width:100%;height:auto;display:block}
-        
-        /* ——— TOP control bar ——— */
-        .video-controls{
-          position:absolute;inset-block-start:0;inset-inline:0;
-          display:flex;align-items:center;justify-content:center;
-          gap:.5rem;padding:.3rem .6rem;
-          background:rgba(0,0,0,.45)
-        }
-        .video-controls button{
-          all:unset;cursor:pointer;display:grid;place-items:center;
-          border-radius:50%;transition:filter .2s
-        }
-        .video-controls button:hover{filter:drop-shadow(0 0 4px #fff)}
-        .video-controls .material-icons-round{font-size:1.8rem;color:#fff}
-        /* dim the inactive buttons */
-        button.inactive .material-icons-round{opacity:.35}
-        /* slim separator between play/pause and volume buttons */
-        .video-controls .spacer{
-          width:.4rem;height:1.6rem;margin-inline:.4rem;
-          border-left:1px solid rgba(255,255,255,.35)
-        }
-        </style>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      /* ───────────────── nav‑main padding on scroll ───────────────── */
-      const navMain = document.getElementById('nav-main');
-      function setNavPadding() {
-        navMain.style.padding = window.scrollY > 600 ? '60px' : '30px';
-      }
-      window.addEventListener('scroll', setNavPadding);
-      setNavPadding();                                   // first run
-    
-      /* ───────────────── video controls ───────────────────────────── */
-      const video      = document.getElementById('video_rest');
-      const playBtn    = document.getElementById('playBtn');
-      const pauseBtn   = document.getElementById('pauseBtn');
-      const muteBtn    = document.getElementById('muteBtn');
-      const unmuteBtn  = document.getElementById('unmuteBtn');
-    
-      function refreshBtns() {
-        playBtn .classList.toggle('inactive', !video.paused);
-        pauseBtn.classList.toggle('inactive',  video.paused);
-        muteBtn .classList.toggle('inactive', !video.muted);
-        unmuteBtn.classList.toggle('inactive', video.muted);
-      }
-    
-      playBtn .onclick = () => { video.play();  refreshBtns(); };
-      pauseBtn.onclick = () => { video.pause(); refreshBtns(); };
-      muteBtn .onclick = () => { video.muted = true;  refreshBtns(); };
-      unmuteBtn.onclick= () => { video.muted = false; refreshBtns(); };
-    
-      video.addEventListener('play',         refreshBtns);
-      video.addEventListener('pause',        refreshBtns);
-      video.addEventListener('volumechange', refreshBtns);
-    
-      refreshBtns();                         // initial state
-    });
-    </script>
     
     
     <!-- Floating Reserve Button -->
@@ -197,7 +53,7 @@
                 <h2>Sobre nosaltras</h2>
                 <div class="sobre-nosaltres-container">
                     <carta class="carta">
-                        <img class="carta-img" src="images/chefs.jpg" alt="chefs">
+                        <img id="carta-first-img" class="carta-img" src="images/chefs.jpg" alt="chefs">
                         <description class="carta-txt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
                             voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
@@ -285,7 +141,7 @@
             <h2>Video del Restaurant</h2>
             <div class="container-video">
             <!-- native bottom bar kept -->
-            <video id="video_rest" muted controls preload="metadata">
+            <video id="video_rest" muted  preload="metadata">
                 <source src="video/video.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
