@@ -671,67 +671,6 @@ button:hover {
   }
 
 
-/* Animacio */
-
-  .container-animacions {
-
-    border: 1px solid black;
-    height: 200px;
-    position: relative;
-  }
-
-  .el-animacio {
-
-
-    background-color: red;
-    width: 20%;
-    animation-name: animacioEx;
-    animation-duration : 3s;
-    animation-delay: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    top: 70px;
-    position: absolute;
-  }
-
-  @keyframes animacioEx{
-    0% { 
-      background-color: red;
-      width: 20%;
-      top: 90px;
-      opacity: 0;
-    }
-    25% { 
-      background-color: yellow;
-      width: 10%;
-      top: 60px;
-      opacity: 0.25;
-    }
-    50% {
-      background-color: blue;
-      width: 10%;
-      opacity: 0.5;
-      top: 0px;
-    }
-    50% {
-      background-color: rgb(255, 0, 230);
-      opacity: 0.75;
-      width: 10%;
-      }
-    100% { 
-      
-      background-color: green;
-      top: 90px;
-      width: 100%;
-    }
-  }
-
-
-  .container-video video {
-
-    width: 100%;
-
-  }
 
   /* ─── ANIMACIONS PER A CORRECCIÓ ─── */
      
@@ -807,6 +746,9 @@ button:hover {
         100% { top: 50%; opacity: 1; }
         }
 
+          .container-video video {
+            width: 100%;
+          }
 
         /* ——— video layout ——— */
         .container-video{position:relative;max-width:60rem;margin:auto}
