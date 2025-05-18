@@ -1,6 +1,3 @@
-# DIW_Maquetacio
-
-
-- 🟡 **Totes les animacions i transicions estan agrupades dins d’un sol `<style>` dins de `index.html` per facilitar la correcció.**
-
-
+DIW_Maquetacio  
+🟡 Totes les animacions i transicions relacionades amb l’activitat comencen al fitxer CSS a partir de la línia 675.  
+La resta del codi d’animació està inclòs al fitxer JavaScript extern.
