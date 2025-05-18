@@ -3,28 +3,30 @@
       /* ───────────────── nav‑main padding on scroll ───────────────── */
         const navMain = document.getElementById('nav-main');
 
-      function setNavPadding() {
-        const scrollTop = window.scrollY;
-        const screenWidth = window.innerWidth;
+        function setNavPadding() {
+    const scrollTop = window.scrollY;
+    const screenWidth = window.innerWidth;
 
-        let padding;
+    let newPadding;
 
-        if (screenWidth <= 576) {
-          // Mobile
-          padding = scrollTop > 200 ? '10px' : '20px';
-        } else if (screenWidth <= 768) {
-          // Tablet
-          padding = scrollTop > 255 ? '20px' : '40px';
-        } else {
-          // Desktop
-          padding = scrollTop > 600 ? '30px' : '60px';
-        }
+    if (screenWidth <= 576) {
+      // Mobile
+      newPadding = scrollTop > 200 ? '10px' : '20px';
+    } else if (screenWidth <= 768) {
+      // Tablet
+      newPadding = scrollTop > 255 ? '20px' : '40px';
+    } else {
+      // Desktop
+      newPadding = scrollTop > 600 ? '30px' : '60px';
+    }
 
-        navMain.style.padding = padding;
-      }
+    // 🛑 Only update if padding is different
+    if (navMain.style.padding !== newPadding) {
+      navMain.style.padding = newPadding;
+    }
+  }
 
       window.addEventListener('scroll', setNavPadding);
-      window.addEventListener('resize', setNavPadding); // Optional: update on resize
       setNavPadding(); // Run on load                                  // first run
     
       /* ───────────────── video controls ───────────────────────────── */

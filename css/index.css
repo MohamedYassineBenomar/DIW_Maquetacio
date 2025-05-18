@@ -748,7 +748,7 @@ button:hover {
           position: sticky;
           top: 0px;
           z-index: 1;
-          transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+          transition: padding 1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
          }
         /* Hover expand with transition */
         .container-hola {
@@ -807,25 +807,6 @@ button:hover {
         100% { top: 50%; opacity: 1; }
         }
 
-        /* Animació bloc vermell */
-        .el-animacio {
-        animation-name: animacioEx;
-        animation-duration: 3s;
-        animation-delay: 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        top: 70px;
-        position: absolute;
-        background-color: red;
-        width: 20%;
-        }
-        @keyframes animacioEx {
-        0%   { background-color: red; width: 20%; top: 90px; opacity: 0; }
-        25%  { background-color: yellow; width: 10%; top: 60px; opacity: 0.25; }
-        50%  { background-color: blue; width: 10%; top: 0px; opacity: 0.5; }
-        75%  { background-color: rgb(255, 0, 230); width: 10%; opacity: 0.75; }
-        100% { background-color: green; top: 90px; width: 100%; }
-        }
 
         /* ——— video layout ——— */
         .container-video{position:relative;max-width:60rem;margin:auto}
