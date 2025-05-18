@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Meta information -->
     <meta charset="UTF-8">
+    <!-- 
+        Ensures responsiveness on mobile devices. 
+        "width=device-width" sets the width of the page to follow the screen-width of the device.
+        "initial-scale=1.0" sets the initial zoom level when the page is first loaded by the browser.
+    -->
+        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icons font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <!-- Link to main stylesheet -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
     <!-- Stylesheets and Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <script src="javascript/js.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
+    
+
+    
+    
     <!-- Floating Reserve Button -->
     <a href="#reserva" class="reserve-button">Reservar</a>
 
     <!-- Navigation Menu -->
-    <nav class="nav-main">
+    <nav id="nav-main" class="nav-main">
         <a href="#sobre-nosaltres">Nosaltres</a>
         <a href="#carta">Carta</a>
         <a href="#galeria">Galeria</a>
     </nav>
+    
     <main>
         <!-- Hero Image Section -->
-        <img src="images/restaurante.jpg" alt="Restaurante"/>
-        <div class="text-overlay">
-            <h1>Restaurant els coberts</h1>
-            <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Sequi laboriosam sunt, qui voluptatum ab excepturi</p>
+        <div class="hero-container">
+            <img src="images/restaurante.jpg" alt="Restaurante"/>
+            <div class="text-overlay">
+                <h1>Restaurant els coberts</h1>
+                <p class="resto-description"><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sequi laboriosam sunt, qui voluptatum ab excepturi</strong></p>
+            </div>
         </div>
+        
         <section class="section-main">
             <!-- About Us Section -->
             <articles id="sobre-nosaltres" class="article-generic article-sobre-nosaltres">
-                <h2 >Sobre nosaltras</h2>
+                <h2>Sobre nosaltras</h2>
                 <div class="sobre-nosaltres-container">
                     <carta class="carta">
-                        <img class="carta-img" src="images/chefs.jpg" alt="chefs">
+                        <img id="carta-first-img" class="carta-img" src="images/chefs.jpg" alt="chefs">
                         <description class="carta-txt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
-                            voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
-                            voluptatum facere, asperiores molestias dolor consectetur porro.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
-                            voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
-                            voluptatum facere, asperiores molestias dolor consectetur porro.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
                             voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
                             voluptatum facere, asperiores molestias dolor consectetur porro.
                         </description>
@@ -52,64 +64,53 @@
                         <img class="carta-img" src="images/comida.jpg" alt="comida">
                         <description class="carta-txt">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quas suscipit, dolores
-                            similique ut amet ab adipisci. Quibusdam cumque eveniet optio voluptatibus. Quia omnis iure
-                            sint quis voluptatum optio facilis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
-                            voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
-                            voluptatum facere, asperiores molestias dolor consectetur porro.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique possimus
-                            voluptates facilis optio tenetur dolorem voluptatem quae quisquam quos ratione ab earum
-                            voluptatum facere, asperiores molestias dolor consectetur porro.
-                            
+                            similique ut amet ab adipisci. Quibusdam cumque eveniet optio voluptatibus.
                         </description>
                     </carta>
                 </div>
             </articles>
-            <!-- Menu Section -->
 
-            <articles id="carta" class="article-generic article-carta" >
+            <!-- Menu Section -->
+            <articles id="carta" class="article-generic article-carta">
                 <h2>Carta</h2>
                 <div class="carta-container">
-                    <h3 class="item item-1">Menu</h3>
+                    <h3 class="item item-1"><p>Menu</p></h3>
                     <!-- Menu Items -->
-
-                    <menu class="item item-2">Menu 1</menu>
-                    <h2 class="item item-3">Contengus</h2>
-                    <p class="item item-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas itaque repudiandae suscipit. Dignissimos alias dolore sapiente, 
-                        molestias libero corrupti, animi quo vero eaque numquam, odio distinctio 
-                        et vitae qui consequuntur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas itaque repudiandae suscipit. Dignissimos alias dolore sapiente, 
-                        molestias libero corrupti, animi quo vero eaque numquam.
-                    </p>
-                    <!-- Menu Images -->
-
-                    <div class="item item-5 carta-img-container">
+                    <div class="item item-2">Menu 1</div>
+                    <div class="item-3">
+                        <h2>Contengus</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Voluptas itaque repudiandae suscipit...
+                        </p>
+                    </div>
+                    
+                    <!-- Menu Imagess -->
+                    <div class="item item-4 carta-img-container">
                         <div class="image-wrapper">
                             <img src="images/iStock-507770111.jpg" alt="Pasta">
                             <div class="overlay">Pasta</div>
                         </div>
                     </div>
-                    <div class="item item-6 carta-img-container">
+                    <div class="item item-5 carta-img-container">
                         <div class="image-wrapper">
                             <img src="images/images.jpeg" alt="entrants">
                             <div class="overlay">entrants</div>
                         </div>
                     </div>
-                    <menu class="item item-2">Menu 2</menu>
-                    <h2 class="item item-3">Contengus</h2>
-                    <p class="item item-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas itaque repudiandae suscipit. Dignissimos alias dolore sapiente, 
-                        molestias libero corrupti, animi quo vero eaque numquam, odio distinctio 
-                        et vitae qui consequuntur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Voluptas itaque repudiandae suscipit. Dignissimos alias dolore sapiente, 
-                        molestias libero corrupti, animi quo vero eaque numquam.
-                    </p>
-                    <div class="item item-5 carta-img-container">
+                    <div class="item item-6">Menu 2</div>
+                    <div class="item-7">
+                        <h2>Contengus</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Voluptas itaque repudiandae suscipit...
+                        </p>
+                    </div>
+                    <div class="item item-8 carta-img-container">
                         <div class="image-wrapper">
                             <img src="images/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg" alt="amanida">
                             <div class="overlay">amanida</div>
                         </div>
                     </div>
-                    <div class="item item-6 carta-img-container">
+                    <div class="item item-9 carta-img-container">
                         <div class="image-wrapper">
                             <img src="images/r171.png" alt="peix">
                             <div class="overlay">peix</div>
@@ -120,10 +121,10 @@
 
             <!-- Gallery Section -->
             <articles id="galeria" class="article-generic article-galeria">
-                <h2 >Galeria</h2>
+                <h2>Galeria</h2>
                 <div class="galeria-container">
                     <div class="galeria-carta">
-                           <!-- Gallery Images -->
+                       <!-- Gallery Images -->
                         <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
                         <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
                         <div class="img-galeria"><img class="galeria-carta-img" src="images/r171.png" alt="koskos"></div>
@@ -135,6 +136,39 @@
                     </div>
                 </div>
             </articles>
+            <!-- ─── Video Section ─────────────────────────────────────────────── -->
+        <articles id="Video" class="article-generic article-Video">
+            <h2>Video del Restaurant</h2>
+            <div class="container-video">
+            <!-- native bottom bar kept -->
+            <video id="video_rest" muted  preload="metadata">
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        
+            <!-- custom top bar -->
+            <nav class="video-controls">
+                <button id="playBtn"  type="button" title="Play">
+                <span class="material-icons-round">play_circle</span>
+                </button>
+                <button id="pauseBtn" type="button" title="Pause">
+                <span class="material-icons-round">pause_circle</span>
+                </button>
+        
+                <span class="spacer"></span>
+        
+                <button id="unmuteBtn" type="button" title="Sound on">
+                <span class="material-icons-round">volume_up</span>
+                </button>
+                <button id="muteBtn"   type="button" title="Mute">
+                <span class="material-icons-round">volume_off</span>
+                </button>
+            </nav>
+            </div>
+        </articles>
+        
+
+            <!-- Reserve Section -->
             <articles id="reserva" class="article-generic article-reserva">
                 <h2>Reserva</h2>
                 <div class="reserva-container"> 
@@ -176,6 +210,7 @@
             </articles>
         </section>
     </main>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -183,12 +218,10 @@
                 <span class="material-icons">email</span>
                 <span>Rrestaurant@gmail.com</span>
             </div>
-    
             <div class="footer-item">
                 <span class="material-icons">phone</span>
                 <span>974543405</span>
             </div>
-    
             <div class="footer-item">
                 <span class="material-icons">image</span>
             </div>
